@@ -1,7 +1,7 @@
 # note-app
 
 ## Introduction
-Note app pinia is a simple note app that uses pinia as a state management library. It is a simple app that allows you to add notes with title and content and mark them as pinned.
+Note app pinia is a simple note app that uses pinia as a state management library. It is a simple app that allows you to add notes with title and content, mark them as pinned, it also allows you to delete notes and edit them.
 
 Done with these [tutorials](https://www.youtube.com/watch?v=4S3v2_6Wuvg). 
 
