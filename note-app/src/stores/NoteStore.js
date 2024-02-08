@@ -61,7 +61,13 @@ export const useNoteStore = defineStore('note', {
 
             this.notes = updateNotes;
 
-        }
+        },
+
+        deleteNote (){
+            const updateNotes = this.notes.filter( item => item.id !== this.selectedNote.id);
+            this.selectedNote = null;
+            this.notes = updateNotes;
+        },
     }
 
 });

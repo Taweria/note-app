@@ -10,6 +10,10 @@ const handleResetView = () => {
 const handleEdit = () => {
     noteStore.editNote = true;
 };
+
+const deleteNote = () => {
+    noteStore.deleteNote();
+};
 </script>
 
 <template>
@@ -19,7 +23,7 @@ const handleEdit = () => {
 			<span class="rs__action-icon material-symbols-outlined" @click="handleEdit">edit_note</span>
 		</div>
 		<div class="rs__action-icons">
-			<span class="material-symbols-outlined">delete</span>
+			<span class="rs__action-icon material-symbols-outlined" @click="deleteNote">delete</span>
 		</div>
 		<div class="rs__action-icons rs__justify-end">
 			<span class="material-symbols-outlined">search</span>
