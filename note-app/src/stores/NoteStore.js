@@ -68,6 +68,9 @@ export const useNoteStore = defineStore('note', {
             this.selectedNote = null;
             this.notes = updateNotes;
         },
-    }
+    },
+
+
+    persist: true,
 
 });
