@@ -4,6 +4,8 @@ export const useNoteStore = defineStore('note', {
     state: () => ({
         notes: [],
         lastNoteID: '',
+        selectedNote: null,
+        editNote: false,
 
     }),
     getters: {
@@ -45,6 +47,20 @@ export const useNoteStore = defineStore('note', {
             });
 
             this.notes = updateNotes;
+        },
+
+        updateNote(id, title, content){
+            const updateNotes = this.notes.map( item =>{
+                if(id === item.id){
+                    item.title = title;
+                    item.content = content;
+                    return item;
+                }
+                return item;
+            });
+
+            this.notes = updateNotes;
+
         }
     }
 

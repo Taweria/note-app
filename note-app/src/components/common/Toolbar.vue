@@ -1,12 +1,22 @@
 <script setup>
+import { useNoteStore } from '@/stores/NoteStore';
 
+const noteStore = useNoteStore();
+
+const handleResetView = () => {
+    noteStore.selectedNote = null;
+};
+
+const handleEdit = () => {
+    noteStore.editNote = true;
+};
 </script>
 
 <template>
 	<div class="rs__top-toolbar">
 		<div class="rs__toolbar-title">
-			RS Notes
-			<span class="rs__action-icon material-symbols-outlined">edit_note</span>
+			<span @click="handleResetView">RS Notes</span>
+			<span class="rs__action-icon material-symbols-outlined" @click="handleEdit">edit_note</span>
 		</div>
 		<div class="rs__action-icons">
 			<span class="material-symbols-outlined">delete</span>
